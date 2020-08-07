@@ -1,0 +1,175 @@
+﻿
+@{
+    ViewBag.Title = "Gestión de Pacientes";
+}
+
+<section class="content">
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="box box-primary">
+                <div class="box-body">
+                    <div class="form-group">
+                        <label>DOCUMENTO DE IDENTIDAD</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="usuario" id="txtNroDocumento" placeholder="ej: 15335559" />
+                    </div>
+                    <div class="form-group">
+                        <label>NOMBRES</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="nombres" id="txtNombres" placeholder="" />
+                    </div>
+                    <div class="form-group">
+                        <label>APELLIDO PATERNO</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="apPaterno" id="txtApPaterno" placeholder="" />
+                    </div>
+                    <div class="form-group">
+                        <label>APELLIDO MATERNO</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="apMaterno" id="txtApMaterno" placeholder="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="box box-primary">
+                <div class="box-body">
+                    <div class="form-group">
+                        <label>SEXO</label>
+                    </div>
+                    <div class="form-group">
+                        <select id="ddlSexo" Class="form-control">
+                            <option value="">Seleecione Opción</option>
+                            <option value="M">Masculino</option>
+                            <option value="F">Femenino</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>EDAD</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="edad" id="txtEdad" placeholder="" />
+                    </div>
+                    <div class="form-group">
+                        <label>TELÉFONO</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="telefono" id="txtTelefono" placeholder="ej: 942700513" />
+                    </div>
+                    <div class="form-group">
+                        <label>DIRECCIÓN</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="direccion" id="txtDireccion" placeholder="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div align="center">
+        <table>
+            <tr>
+                <td>
+                    <button type="submit" id="btnRegistrar" class="btn btn-primary">Registrar</button>
+                </td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td>
+                    <button type="submit" id="btnCancelar" class="btn btn-danger">Cancelar</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <br />
+
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box box-primary">
+                <div class="box-header">
+                    <h3 class="box-title">Lista de Pacientes</h3>
+                </div>
+                <div class="box-body table-responsive">
+                    <table id="tbl_pacientes" class="display" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>Código</th>
+                                <th>Nombres</th>
+                                <th>Apellido Paterno</th>
+                                <th>Apellido Materno</th>
+                                <th>Edad</th>
+                                <th>Sexo</th>
+                                <th>Nro Documento</th>
+                                <th>Dirección</th>
+                                <th>Teléfono</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbl_body_table">
+                            <!-- DATA POR MEDIO DE AJAX-->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- Modal Editar Datos -->
+<div class="modal fade" id="editmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Actualizar registro</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>NOMBRES</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="txtModalNombre" Text="" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>APELLIDO PATERNO</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="txtModalApPaterno" Text="" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>APELLIDO MATERNO</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="txtModalApMaterno" Text="" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>TELÉFONO</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="txtModalTelefono" Text="" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>DIRECCIÓN</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="txtModalDireccion" Text="" class="form-control">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="btnActualizar">Actualizar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal Editar Datos -->
+
+@section scripts{
+
+    <script src="~/Js/GestionarPaciente/GestionarPaciente.js"></script>
+}

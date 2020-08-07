@@ -1,0 +1,11 @@
+C:\Users\MauricioACV\source\repos\SistemaWebClinicaMvc5\SistemaWebClinicaMvc5.Negocio\bin\Debug\SistemaWebClinicaMvc5.Negocio.dll
+C:\Users\MauricioACV\source\repos\SistemaWebClinicaMvc5\SistemaWebClinicaMvc5.Negocio\bin\Debug\SistemaWebClinicaMvc5.Negocio.pdb
+C:\Users\MauricioACV\source\repos\SistemaWebClinicaMvc5\SistemaWebClinicaMvc5.Negocio\bin\Debug\SistemaWebClinicaMvc5.Core.dll
+C:\Users\MauricioACV\source\repos\SistemaWebClinicaMvc5\SistemaWebClinicaMvc5.Negocio\bin\Debug\SistemaWebClinicaMvc5.Data.dll
+C:\Users\MauricioACV\source\repos\SistemaWebClinicaMvc5\SistemaWebClinicaMvc5.Negocio\bin\Debug\SistemaWebClinicaMvc5.Core.pdb
+C:\Users\MauricioACV\source\repos\SistemaWebClinicaMvc5\SistemaWebClinicaMvc5.Negocio\bin\Debug\SistemaWebClinicaMvc5.Data.pdb
+C:\Users\MauricioACV\source\repos\SistemaWebClinicaMvc5\SistemaWebClinicaMvc5.Negocio\obj\Debug\SistemaWebClinicaMvc5.Negocio.csprojAssemblyReference.cache
+C:\Users\MauricioACV\source\repos\SistemaWebClinicaMvc5\SistemaWebClinicaMvc5.Negocio\obj\Debug\SistemaWebClinicaMvc5.Negocio.csproj.CoreCompileInputs.cache
+C:\Users\MauricioACV\source\repos\SistemaWebClinicaMvc5\SistemaWebClinicaMvc5.Negocio\obj\Debug\SistemaWebClinicaMvc5.Negocio.csproj.CopyComplete
+C:\Users\MauricioACV\source\repos\SistemaWebClinicaMvc5\SistemaWebClinicaMvc5.Negocio\obj\Debug\SistemaWebClinicaMvc5.Negocio.dll
+C:\Users\MauricioACV\source\repos\SistemaWebClinicaMvc5\SistemaWebClinicaMvc5.Negocio\obj\Debug\SistemaWebClinicaMvc5.Negocio.pdb
