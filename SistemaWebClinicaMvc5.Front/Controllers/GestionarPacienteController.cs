@@ -1,4 +1,5 @@
 ﻿using SistemaWebClinicaMvc5.Core.Entidades;
+using SistemaWebClinicaMvc5.Core.Interfaces;
 using SistemaWebClinicaMvc5.Core.Interfaces.IPaciente;
 using SistemaWebClinicaMvc5.Front.Responses;
 using System.Collections;

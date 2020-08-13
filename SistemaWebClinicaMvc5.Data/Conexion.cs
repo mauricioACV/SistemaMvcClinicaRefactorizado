@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -9,7 +10,7 @@ namespace SistemaWebClinicaMvc5.Data
 {
     public class Conexion
     {
-        #region "Patron Singleton"
+        #region "Singleton"
         private static Conexion conexion = null;
         private Conexion() { }
         public static Conexion ObtenerInstancia()
@@ -27,7 +28,7 @@ namespace SistemaWebClinicaMvc5.Data
         {
             SqlConnection conexion = new SqlConnection
             {
-                ConnectionString = "Data Source=EXTDV-MCAMPUSAN\\SQLEXPRESS;Initial Catalog=DBClinica;User ID=sa;Password=Javieraamanda1"
+                ConnectionString = ConfigurationManager.ConnectionStrings["DbConexion"].ToString() 
             };
             return conexion;
         }

@@ -3,18 +3,15 @@ using SistemaWebClinicaMvc5.Core.Interfaces.IPaciente;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SistemaWebClinicaMvc5.Data.Repositorios
 {
     public class PacienteRepositorio: IPacienteRepositorio
     {
         private readonly SqlConnection _conexion;
-        public PacienteRepositorio()
+        public PacienteRepositorio(SqlConnection ConexionDb)
         {
-            _conexion = Conexion.ObtenerInstancia().ObtenerConexionBd();
+            _conexion = ConexionDb;
         }
 
         public List<Paciente> ListarPacientes()
@@ -28,28 +25,30 @@ namespace SistemaWebClinicaMvc5.Data.Repositorios
                 var query = @"SELECT p.idPaciente,p.nombres,p.apPaterno,p.apMaterno,p.edad,p.sexo,p.nroDocumento,p.direccion, p.telefono,p.estado
                                FROM Paciente p WHERE p.estado=1";
                 cmd = new SqlCommand(query, _conexion);
-                _conexion.Open();
-                dr = cmd.ExecuteReader();
+                _conexion.Open();                
 
-
-                while (dr.Read())
+                using(dr = cmd.ExecuteReader())
                 {
-                    Paciente objPaciente = new Paciente
+                    while (dr.Read())
                     {
-                        IdPaciente = Convert.ToInt32(dr["idPaciente"].ToString()),
-                        Nombres = dr["nombres"].ToString(),
-                        ApPaterno = dr["apPaterno"].ToString(),
-                        ApMaterno = dr["apMaterno"].ToString(),
-                        Edad = Convert.ToInt32(dr["edad"].ToString()),
-                        Sexo = Convert.ToChar(dr["sexo"].ToString()),
-                        NroDocumento = dr["nroDocumento"].ToString(),
-                        Direccion = dr["direccion"].ToString(),
-                        Telefono = dr["telefono"].ToString(),
-                        Estado = true
-                    };
+                        Paciente objPaciente = new Paciente
+                        {
+                            IdPaciente = Convert.ToInt32(dr["idPaciente"].ToString()),
+                            Nombres = dr["nombres"].ToString(),
+                            ApPaterno = dr["apPaterno"].ToString(),
+                            ApMaterno = dr["apMaterno"].ToString(),
+                            Edad = Convert.ToInt32(dr["edad"].ToString()),
+                            Sexo = Convert.ToChar(dr["sexo"].ToString()),
+                            NroDocumento = dr["nroDocumento"].ToString(),
+                            Direccion = dr["direccion"].ToString(),
+                            Telefono = dr["telefono"].ToString(),
+                            Estado = true
+                        };
 
-                    lista.Add(objPaciente);
+                        lista.Add(objPaciente);
+                    }
                 }
+                
             }
             catch (Exception ex)
             {

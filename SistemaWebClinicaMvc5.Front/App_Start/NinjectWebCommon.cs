@@ -10,6 +10,7 @@ namespace SistemaWebClinicaMvc5.Front.App_Start
 
     using Ninject;
     using Ninject.Web.Common;
+    using SistemaWebClinicaMvc5.Core.Interfaces;
     using SistemaWebClinicaMvc5.Core.Interfaces.IPaciente;
     using SistemaWebClinicaMvc5.Data.Repositorios;
     using SistemaWebClinicaMvc5.Negocio.Servicios;
@@ -64,8 +65,9 @@ namespace SistemaWebClinicaMvc5.Front.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
-            kernel.Bind<IPacienteRepositorio>().To<PacienteRepositorio>();
+            //kernel.Bind<IPacienteRepositorio>().To<PacienteRepositorio>();
             kernel.Bind<IPacienteServicio>().To<PacienteServicio>();
+            kernel.Bind<IUnitOfWork>().To<UnitOfWork>();
         }        
     }
 }
