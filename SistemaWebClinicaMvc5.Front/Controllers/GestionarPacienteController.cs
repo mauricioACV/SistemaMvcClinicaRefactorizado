@@ -1,8 +1,8 @@
 ﻿using SistemaWebClinicaMvc5.Core.Entidades;
 using SistemaWebClinicaMvc5.Core.Interfaces;
 using SistemaWebClinicaMvc5.Core.Interfaces.IPaciente;
+using SistemaWebClinicaMvc5.Front.Filters;
 using SistemaWebClinicaMvc5.Front.Responses;
-using System.Collections;
 using System.Collections.Generic;
 using System.Web.Mvc;
 
@@ -17,7 +17,13 @@ namespace SistemaWebClinicaMvc.front.Controllers
             _pacienteServicio = pacienteServicio;
         }
         // GET: GestionarPaciente
+        [AutorizaRol(rol: 1)]
         public ActionResult Index()
+        {
+            return View();
+        }
+
+        public ActionResult ListarPacienteIndex()
         {
             return View();
         }
@@ -38,6 +44,7 @@ namespace SistemaWebClinicaMvc.front.Controllers
             return Json(response);
         }
 
+        [AutorizaRol(rol: 1)]
         [HttpPost]
         public ActionResult ActualizarPaciente(Paciente objActualizaPaciente)
         {

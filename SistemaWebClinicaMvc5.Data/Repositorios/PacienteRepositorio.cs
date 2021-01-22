@@ -76,10 +76,12 @@ namespace SistemaWebClinicaMvc5.Data.Repositorios
                         "'" + objPaciente.Edad + "','" + objPaciente.Sexo + "','" + objPaciente.NroDocumento + "'," +
                         "'" + objPaciente.Direccion + "','" + objPaciente.Telefono + "','" + objPaciente.Estado + "')";
 
-                cmd = new SqlCommand(query, _conexion);
-                _conexion.Open();
-                int filas = cmd.ExecuteNonQuery();
-                if (filas > 0) { response = true; }
+                using (cmd = new SqlCommand(query, _conexion))
+                {
+                    _conexion.Open();
+                    int filas = cmd.ExecuteNonQuery();
+                    if (filas > 0) { response = true; }
+                }
             }
             catch (Exception ex)
             {
@@ -101,10 +103,12 @@ namespace SistemaWebClinicaMvc5.Data.Repositorios
             {
                 var query = @"DELETE from Paciente WHERE idPaciente='" + id + "' ";
 
-                cmd = new SqlCommand(query, _conexion);
-                _conexion.Open();
-                int filas = cmd.ExecuteNonQuery();
-                if (filas > 0) { response = true; }
+                using (cmd = new SqlCommand(query, _conexion))
+                {
+                    _conexion.Open();
+                    int filas = cmd.ExecuteNonQuery();
+                    if (filas > 0) { response = true; }
+                }
             }
             catch (Exception ex)
             {
@@ -134,10 +138,12 @@ namespace SistemaWebClinicaMvc5.Data.Repositorios
                             "direccion ='" + objActualizaPaciente.Direccion + "' " +
                             "WHERE idPaciente = '" + objActualizaPaciente.IdPaciente + "'";
 
-                cmd = new SqlCommand(query, _conexion);
-                _conexion.Open();
-                int filas = cmd.ExecuteNonQuery();
-                if (filas > 0) { response = true; }
+                using (cmd = new SqlCommand(query, _conexion))
+                {
+                    _conexion.Open();
+                    int filas = cmd.ExecuteNonQuery();
+                    if (filas > 0) { response = true; }
+                }
             }
             catch (Exception ex)
             {
@@ -162,25 +168,26 @@ namespace SistemaWebClinicaMvc5.Data.Repositorios
                 var query = @"SELECT p.idPaciente,p.nombres,p.apPaterno,p.apMaterno,p.edad,p.sexo,p.nroDocumento,p.direccion, p.telefono,p.estado
                                FROM Paciente p WHERE p.nroDocumento = '" + dni + "' ";
 
-                cmd = new SqlCommand(query, _conexion);
-                _conexion.Open();
-                dr = cmd.ExecuteReader();
-
-                if (dr.Read())
+                using (cmd = new SqlCommand(query, _conexion))
                 {
-                    objPaciente = new Paciente
+                    _conexion.Open();
+                    dr = cmd.ExecuteReader();
+
+                    if (dr.Read())
                     {
-                        IdPaciente = Convert.ToInt32(dr["idPaciente"]),
-                        Nombres = dr["nombres"].ToString(),
-                        ApPaterno = dr["apPaterno"].ToString(),
-                        ApMaterno = dr["apMaterno"].ToString(),
-                        Telefono = dr["telefono"].ToString(),
-                        Edad = Convert.ToInt32(dr["edad"].ToString()),
-                        Sexo = Convert.ToChar(dr["sexo"].ToString())
-                    };
+                        objPaciente = new Paciente
+                        {
+                            IdPaciente = Convert.ToInt32(dr["idPaciente"]),
+                            Nombres = dr["nombres"].ToString(),
+                            ApPaterno = dr["apPaterno"].ToString(),
+                            ApMaterno = dr["apMaterno"].ToString(),
+                            Telefono = dr["telefono"].ToString(),
+                            Edad = Convert.ToInt32(dr["edad"].ToString()),
+                            Sexo = Convert.ToChar(dr["sexo"].ToString())
+                        };
 
+                    }
                 }
-
             }
             catch (Exception ex)
             {

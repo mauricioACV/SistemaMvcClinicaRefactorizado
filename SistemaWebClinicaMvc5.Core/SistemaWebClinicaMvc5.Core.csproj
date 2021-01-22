@@ -41,7 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entidades\Empleado.cs" />
     <Compile Include="Entidades\Paciente.cs" />
+    <Compile Include="Entidades\TipoEmpleado.cs" />
+    <Compile Include="Interfaces\IEmpleado\IEmpleadoRepositorio.cs" />
+    <Compile Include="Interfaces\IEmpleado\IEmpleadoServicio.cs" />
     <Compile Include="Interfaces\IPaciente\IPacienteRepositorio.cs" />
     <Compile Include="Interfaces\IPaciente\IPacienteServicio.cs" />
     <Compile Include="Interfaces\IUnitOfWork.cs" />

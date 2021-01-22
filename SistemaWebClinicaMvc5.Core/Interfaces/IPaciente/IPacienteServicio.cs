@@ -13,7 +13,7 @@ namespace SistemaWebClinicaMvc5.Core.Interfaces.IPaciente
 
         bool RegistrarPaciente(Paciente objPaciente);
 
-        bool EliminarPaciente(int id);
+        bool EliminarPaciente(int? id);
 
         bool ActualizarPaciente(Paciente objPaciente);
 

@@ -17,7 +17,7 @@ namespace SistemaWebClinicaMvc5.Negocio.Servicios
 
         public List<Paciente> ListarPacientes()
         {
-            //aqui irán las validaciones a cumplir antes de realizar la opreacion en base de datos y retornar el resultado
+            //aqui irán las validaciones (reglas de negocios) antes de realizar la opreacion en base de datos y retornar el resultado
             return _unitOfWork.PacienteRepositorio.ListarPacientes();
         }
 
@@ -28,17 +28,23 @@ namespace SistemaWebClinicaMvc5.Negocio.Servicios
 
         public bool RegistrarPaciente(Paciente objPaciente)
         {
-            //aqui irán las validaciones a cumplir antes de realizar la opreacion en base de datos y retornar el resultado
+            //aqui irán las validaciones (reglas de negocios) antes de realizar la opreacion en base de datos y retornar el resultado
             return _unitOfWork.PacienteRepositorio.RegistrarPaciente(objPaciente);
         }
 
-        public bool EliminarPaciente(int id)
+        public bool EliminarPaciente(int? id)
         {
+            if (id==null)
+            {
+                return false;
+            }
+
             throw new NotImplementedException();
         }
 
         public bool ActualizarPaciente(Paciente objActualizaPaciente)
         {
+            //aqui irán las validaciones (reglas de negocios) antes de realizar la opreacion en base de datos y retornar el resultado
             return _unitOfWork.PacienteRepositorio.ActualizarPaciente(objActualizaPaciente);
         }
     }

@@ -4,3 +4,15 @@ C:\Users\MauricioACV\source\repos\SistemaWebClinicaMvc5\SistemaWebClinicaMvc5.Co
 C:\Users\MauricioACV\source\repos\SistemaWebClinicaMvc5\SistemaWebClinicaMvc5.Core\bin\Debug\SistemaWebClinicaMvc5.Core.pdb
 C:\Users\MauricioACV\source\repos\SistemaWebClinicaMvc5\SistemaWebClinicaMvc5.Core\obj\Debug\SistemaWebClinicaMvc5.Core.dll
 C:\Users\MauricioACV\source\repos\SistemaWebClinicaMvc5\SistemaWebClinicaMvc5.Core\obj\Debug\SistemaWebClinicaMvc5.Core.pdb
+C:\Users\Mauricio\source\repos\SistemaWebClinicaMvc5\SistemaWebClinicaMvc5.Core\bin\Debug\SistemaWebClinicaMvc5.Core.dll
+C:\Users\Mauricio\source\repos\SistemaWebClinicaMvc5\SistemaWebClinicaMvc5.Core\bin\Debug\SistemaWebClinicaMvc5.Core.pdb
+C:\Users\Mauricio\source\repos\SistemaWebClinicaMvc5\SistemaWebClinicaMvc5.Core\obj\Debug\SistemaWebClinicaMvc5.Core.csprojAssemblyReference.cache
+C:\Users\Mauricio\source\repos\SistemaWebClinicaMvc5\SistemaWebClinicaMvc5.Core\obj\Debug\SistemaWebClinicaMvc5.Core.csproj.CoreCompileInputs.cache
+C:\Users\Mauricio\source\repos\SistemaWebClinicaMvc5\SistemaWebClinicaMvc5.Core\obj\Debug\SistemaWebClinicaMvc5.Core.dll
+C:\Users\Mauricio\source\repos\SistemaWebClinicaMvc5\SistemaWebClinicaMvc5.Core\obj\Debug\SistemaWebClinicaMvc5.Core.pdb
+E:\Repos\SistemaWebClinicaMvc5\SistemaWebClinicaMvc5.Core\bin\Debug\SistemaWebClinicaMvc5.Core.dll
+E:\Repos\SistemaWebClinicaMvc5\SistemaWebClinicaMvc5.Core\bin\Debug\SistemaWebClinicaMvc5.Core.pdb
+E:\Repos\SistemaWebClinicaMvc5\SistemaWebClinicaMvc5.Core\obj\Debug\SistemaWebClinicaMvc5.Core.csprojAssemblyReference.cache
+E:\Repos\SistemaWebClinicaMvc5\SistemaWebClinicaMvc5.Core\obj\Debug\SistemaWebClinicaMvc5.Core.csproj.CoreCompileInputs.cache
+E:\Repos\SistemaWebClinicaMvc5\SistemaWebClinicaMvc5.Core\obj\Debug\SistemaWebClinicaMvc5.Core.dll
+E:\Repos\SistemaWebClinicaMvc5\SistemaWebClinicaMvc5.Core\obj\Debug\SistemaWebClinicaMvc5.Core.pdb

@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="SqlConnectionLibrary">
+      <HintPath>.\SqlConnectionLibrary.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -44,6 +47,7 @@
   <ItemGroup>
     <Compile Include="Conexion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositorios\EmpleadoRepositorio.cs" />
     <Compile Include="Repositorios\PacienteRepositorio.cs" />
     <Compile Include="Repositorios\UnitOfWork.cs" />
   </ItemGroup>
@@ -52,6 +56,9 @@
       <Project>{f40c41cb-44de-4ea8-821f-3a3e66b62f18}</Project>
       <Name>SistemaWebClinicaMvc5.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Filters\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

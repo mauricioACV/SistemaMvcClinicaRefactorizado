@@ -1,0 +1,92 @@
+﻿
+@{
+    ViewBag.Title = "Listado Pacientes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box box-primary">
+                <div class="box-header">
+                    <h3 class="box-title">Pacientes Activos</h3>
+                </div>
+                <div class="box-body table-responsive">
+                    <table id="tbl_pacientes" class="display" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>Código</th>
+                                <th>Nombres</th>
+                                <th>Apellido Paterno</th>
+                                <th>Apellido Materno</th>
+                                <th>Edad</th>
+                                <th>Sexo</th>
+                                <th>Nro Documento</th>
+                                <th>Dirección</th>
+                                <th>Teléfono</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbl_body_table">
+                            <!-- DATA POR MEDIO DE AJAX-->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Editar Datos -->
+    <div class="modal fade" id="editmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Actualizar registro</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>NOMBRES</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="txtModalNombre" Text="" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>APELLIDO PATERNO</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="txtModalApPaterno" Text="" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>APELLIDO MATERNO</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="txtModalApMaterno" Text="" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>TELÉFONO</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="txtModalTelefono" Text="" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>DIRECCIÓN</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="txtModalDireccion" Text="" class="form-control">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="btnActualizar">Actualizar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Editar Datos -->
+</section>
+
+    @section scripts{
+
+        <script src="~/Js/GestionarPaciente/GestionarPaciente.js"></script>
+    }

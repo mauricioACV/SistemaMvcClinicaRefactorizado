@@ -133,8 +133,13 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AccesoController.cs" />
+    <Compile Include="Controllers\CerrarSesionController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\GestionarPacienteController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Filters\AutorizaRol.cs" />
+    <Compile Include="Filters\VerificaSession.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -309,6 +314,7 @@
     <Content Include="css\ionslider\ion.rangeSlider.skinFlat.css" />
     <Content Include="css\ionslider\ion.rangeSlider.skinNice.css" />
     <Content Include="css\jvectormap\jquery-jvectormap-1.2.2.css" />
+    <Content Include="css\login\styleLogin.css" />
     <Content Include="css\morris\morris.css" />
     <Content Include="css\timepicker\bootstrap-timepicker.css" />
     <Content Include="css\timepicker\bootstrap-timepicker.min.css" />
@@ -364,7 +370,6 @@
     <Content Include="Js\bootstrap.min.js" />
     <Content Include="Js\GestionarPaciente.js" />
     <Content Include="Js\GestionarPaciente\GestionarPaciente.js" />
-    <Content Include="Js\logout.js" />
     <Content Include="Js\plugins\bootstrap-slider\bootstrap-slider.js" />
     <Content Include="Js\plugins\bootstrap-wysihtml5\bootstrap3-wysihtml5.all.min.js" />
     <Content Include="Js\plugins\bootstrap-wysihtml5\bootstrap3-wysihtml5.js" />
@@ -531,10 +536,14 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\GestionarPaciente\Index.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Acceso\LoginIndex.cshtml" />
+    <Content Include="Views\GestionarPaciente\ListarPacienteIndex.cshtml" />
+    <Content Include="Views\Error\Unauthorized.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\CerraSesion\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -581,7 +590,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>14011</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:14011/</IISUrl>
+          <IISUrl>http://localhost:15011/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

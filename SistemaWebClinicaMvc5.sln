@@ -11,6 +11,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaWebClinicaMvc5.Data"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaWebClinicaMvc5.Negocio", "SistemaWebClinicaMvc5.Negocio\SistemaWebClinicaMvc5.Negocio.csproj", "{06885409-010A-4C9A-93BA-ECFEAE592C6A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SistemaWebClinicaMvc5.UnitTests", "SistemaWebClinicaMvc5.UnitTests", "{8EC86829-BE3D-4D8D-8315-339C25FC182F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaWebClinicaMv5.UnitTests", "SistemaWebClinicaMv5.UnitTests\SistemaWebClinicaMv5.UnitTests.csproj", "{5C5B9787-AE86-4932-80C1-B854985EBAE3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SistemaWebClinicaMvc5.IntegrationTests", "SistemaWebClinicaMvc5.IntegrationTests", "{1AC93138-D44D-4431-8B28-34B91663BA67}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaWebClinicaMvc5.IntegrationTests", "SistemaWebClinicaMvc5.IntegrationTests\SistemaWebClinicaMvc5.IntegrationTests.csproj", "{E636C21C-48B4-4895-B03B-0639FBE6A514}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,9 +41,21 @@ Global
 		{06885409-010A-4C9A-93BA-ECFEAE592C6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06885409-010A-4C9A-93BA-ECFEAE592C6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06885409-010A-4C9A-93BA-ECFEAE592C6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C5B9787-AE86-4932-80C1-B854985EBAE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C5B9787-AE86-4932-80C1-B854985EBAE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C5B9787-AE86-4932-80C1-B854985EBAE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C5B9787-AE86-4932-80C1-B854985EBAE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E636C21C-48B4-4895-B03B-0639FBE6A514}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E636C21C-48B4-4895-B03B-0639FBE6A514}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E636C21C-48B4-4895-B03B-0639FBE6A514}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E636C21C-48B4-4895-B03B-0639FBE6A514}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5C5B9787-AE86-4932-80C1-B854985EBAE3} = {8EC86829-BE3D-4D8D-8315-339C25FC182F}
+		{E636C21C-48B4-4895-B03B-0639FBE6A514} = {1AC93138-D44D-4431-8B28-34B91663BA67}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {04116FE7-A1D0-4A5E-94C1-6C6FFBB09F21}

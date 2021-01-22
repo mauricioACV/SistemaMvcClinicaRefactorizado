@@ -1,0 +1,28 @@
+﻿
+@{
+                /**/
+
+                ViewBag.Title = "Login";
+                Layout = null;
+}
+<link href="~/css/login/styleLogin.css" rel="stylesheet" type="text/css" />
+<div class="contenedor">
+
+    <h2>INICIAR SESIÓN</h2>
+
+    <form action="@Url.Content("~/Acceso/Login")" method="post">
+        <div class="dialogo" >
+            <div class="form-group">
+                <label>Ususario:</label>
+                <input type="text" name="User" />
+            </div>
+            <div class="form-group">
+                <label>Password:</label>
+                <input type="password" name="Pass" />
+            </div>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Acceder" class="boton" />
+        </div>
+    </form>
+</div>
